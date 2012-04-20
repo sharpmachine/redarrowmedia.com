@@ -5,6 +5,7 @@
  */
 automatic_feed_links();
 
+include 'functions/customize-admin.php';
 
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow == "themes.php" ) {
 echo "<div class='updated fade'><p>You can set up your theme by <a href=".get_bloginfo('url')."/wp-admin/themes.php?page=functions.php>clicking here</a></p></div>";
