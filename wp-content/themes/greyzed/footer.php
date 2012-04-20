@@ -89,19 +89,6 @@ if ((get_option('greyzed_youtube') != "") AND ($count != 5)){ ?><li class="youtu
 </div>
 </div>
 	
-	<div class="footerlinks">
-	
-   <a href="<?php echo get_option('home'); ?>/">Home</a> &nbsp;&nbsp;|			
-		<?php
-			$links = get_pages('number=6&sort_column=post_date&depth=1&title_li=');
-			foreach($links as $i => $page)
-			$links[$i] = '&nbsp;<a href="' . get_page_link($page->ID) . '" title="' . attribute_escape(apply_filters('the_title', $page->post_title)) . '">' . apply_filters('the_title', $page->post_title) . '</a>';
-			echo implode('&nbsp; | &nbsp;', $links);
-		?>	
-		&nbsp;|&nbsp; <a href="<?php if (get_option('greyzed_feedburner') == "#") { bloginfo('rss_url'); } else echo get_option('greyzed_feedburner');?>" title="RSS">Posts RSS</a>
-		&nbsp;|&nbsp; <a href="<?php bloginfo('comments_rss2_url'); ?>" title="Comments RSS">Comments RSS</a>
-
-	</div>
 </div>
 
 <div id="footer-bott">&copy; 2010 <?php bloginfo('name'); ?>. All Rights Reserved. Greyzed Theme created by <a href="http://www.theforge.co.za/" title="The Forge Web Creations">The Forge Web Creations</a>. Powered by <a href="http://wordpress.org/">WordPress</a>.</div>

@@ -24,15 +24,7 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="page">
-	<div id="nav">
-    	<ul>
-			<li><a <?php if (is_home()) { echo "class=\"selected\""; } ?> href="<?php echo get_option('home'); ?>/">Home</a></li>
-  		</ul>
-  		
-  		<ul>
-		<?php wp_list_pages('sort_column=post_date&depth=1&title_li='); ?>
-  		</ul>
-	</div>
+	<?php wp_nav_menu( array('menu' => 'Main Navigation', 'container_class' => 'menu-header')); ?>
 
 <div id="header" role="banner">
 		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>

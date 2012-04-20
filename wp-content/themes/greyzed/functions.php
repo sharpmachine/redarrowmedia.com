@@ -331,3 +331,5 @@ case "checkbox":
 add_action('admin_menu', 'mytheme_add_admin'); 
 /* END ADD MENU */
 ?>
+
+<?php register_nav_menu( 'main-nav', 'Main Navigation' ); ?> 

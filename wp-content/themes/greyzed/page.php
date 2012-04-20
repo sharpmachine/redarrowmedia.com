@@ -17,9 +17,9 @@ get_header(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<div class="posttitle">
 				<h2 class="pagetitle"><?php the_title(); ?></h2>
-				<small>By <strong><?php the_author() ?></strong></small>
+
 			</div>
-			<div class="postcomments"><?php comments_popup_link('0', '1', '%'); ?></div>
+
 
 			<div class="entry">
 				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
@@ -47,7 +47,7 @@ get_header(); ?>
 		</div>-->
 		
 
-	<?php comments_template(); ?>
+
 
 			
 		</div>

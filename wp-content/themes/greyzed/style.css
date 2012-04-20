@@ -52,7 +52,7 @@ body {
 	text-align: left;
 
 	}
-
+	
 #content {
 	
 	width: 751px;
@@ -652,6 +652,7 @@ img.alignleft {
 	}
 	
 
+
 /*-------------------------------
 END images
 -------------------------------*/
@@ -662,50 +663,80 @@ END images
 BEGIN lists
 -------------------------------*/
 
- 
-      #nav {
-		margin-left: 80px;
-		position:absolute;
-		width: 900px;
+.menu-header {
+	margin-left:80px;
+	position:absolute;
+	width:900px;
 }
-      
-      #nav ul {
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-      }
 
-       
-      #nav ul li {
-        background-color: transparent;
-      }
-       
-      #nav ul li,
-      #nav ul li a {
-        float: left;
-        display: block;
-      }
-       
-      #nav ul li a {
-        margin: 6px 15px 0 10px;
-        padding: 5px 10px 5px 10px;
-        font-size: 1.2em;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-      }
+.menu-header ul {
+	list-style:none;
+	margin:0;
+}
 
-      #nav ul li a:hover,
-      #nav ul li a.selected {
-        background-color: #cc0000;
-        color: #fff;
-      }
+.menu-header li {
+	float:left;
+	position:relative;
+}
 
-	  .current_page_item a:hover,
-      .current_page_item a {
-        background-color: #cc0000;
-        color: #fff;
-      }
+.menu-header a {
+	color:#fff;
+	display:block;
+	font-weight:bold;
+	margin:6px 15px 0 10px;
+	padding:5px 10px 5px 10px;
+	font-size:1.2em;
+	text-decoration:none;
+}
+
+.menu-header ul ul {
+	display:none;
+	position:absolute;
+	top:30px;
+	left:10px;
+	float:left;
+	box-shadow:0px 3px 3px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.2);
+	z-index:99999;
+}
+
+.menu-header ul ul li {
+	min-width:180px;
+}
+
+.menu-header ul ul ul {
+	left:100%;
+	top:0;
+}
+
+.menu-header ul ul a {
+	background-color:#cc0000;
+	height:auto;
+	line-height:1em;
+	margin:0 0 0 0;
+	padding:10px;
+	width:160px;
+}
+
+.menu-header li:hover > a {
+	background-color:#cc0000;
+	color:#fff;
+}
+
+.menu-header ul ul li a:hover {
+	background-color:#AD0000;
+}
+
+.menu-header ul li:hover > ul {
+	display:block;
+}
+
+.menu-header ul li.current_page_item > a, 
+.menu-header ul li.current-menu-item > a {
+	background-color:#cc0000;
+	color:#fff;
+}
 
 
 html>body .entry ul {
