@@ -45,7 +45,11 @@ get_header(); ?>
 				<li id="share-email"><a href="mailto:?subject=Thought you might like this&body=<?php the_permalink();?>" title="Email"><span>Email</span></a></li>
 			</ul>
 		</div>-->
+		
 
+	<?php comments_template(); ?>
+
+			
 		</div>
 		
 		<?php endwhile; endif; ?>
